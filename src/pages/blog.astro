@@ -3,7 +3,8 @@ import Base from "../layouts/Base.astro";
 import Post from "../components/Post.astro";
 import "../styles/blog.scss"
 
-const allPosts = Object.values(import.meta.glob("./posts/*.md", {eager: true}));
+const allPosts: IPost[] = Object.values(import.meta.glob("./posts/*.md", {eager: true}));
+allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
 ---
 
 <Base>
