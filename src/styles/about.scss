@@ -15,6 +15,7 @@ $light_blue: #81b4c5;
 
     .floated {
       float: right;
+      width: 150px;
     }
 
     p {
@@ -25,23 +26,30 @@ $light_blue: #81b4c5;
     }
   }
 
-  .center {
+  .links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
-    .socials {
-      padding: 0;
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      justify-content: space-around;
+    img {
+      margin: 2px;
+    }
+  }
 
-      li > a > img {
-        width: 32px;
+  .my_links {
+    //display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
 
-        filter: invert(97%) sepia(2%) saturate(2244%) hue-rotate(175deg) brightness(96%) contrast(90%);
-      }
+    span {
+      font-family: "Space Mono", monospace;
+      color: $light_blue;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    img {
+      margin: 2px;
     }
   }
 }

@@ -1,53 +1,56 @@
 ---
 import '../styles/layout.scss'
+
 ---
 
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/porto.gif" />
-		<meta name="generator" content={Astro.generator} />
-		<title>argonptg</title>
-	</head>
-	<body>
-		<div class="header">
-			<div class="home">
-				<a href="/" class="item" id="home">
-					<img src="/porto.gif" alt="portgfmo">
-					argonptg
-				</a>
-			</div>
-			<ul class="nav">
-				<li class="item">
-					<a href="/about" class="item">
-						sobre
-					</a>
-				</li>
-				<li class="item">
-					<a href="/projects" class="item">
-						projetos
-					</a>
-				</li>
-				<li class="item">
-					<a href="/blog" class="item">
-						blog
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="content">
-			<slot/>
-		</div>
-	</body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/porto.gif"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>Cantinho do Argon</title>
+</head>
+<body>
+<div class="header">
+    <div class="home">
+        <a href="/" class="item" id="home">
+            <img src="/porto.gif" alt="portgfmo">
+            <span>
+                argonptg
+            </span>
+        </a>
+    </div>
+    <ul class="nav">
+        <li class="item">
+            <a href="/about" class="item">
+                sobre
+            </a>
+        </li>
+        <li class="item">
+            <a href="/projects" class="item">
+                projetos
+            </a>
+        </li>
+        <li class="item">
+            <a href="/blog" class="item">
+                blog
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <slot/>
+</div>
+</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>
