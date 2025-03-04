@@ -52,3 +52,50 @@ $light_blue: #81b4c5;
     }
   }
 }
+
+@media screen and (max-width: 430px) {
+  .content .projects {
+    .project {
+      width: 99px;
+
+      .description {
+        font-size: 0.78rem;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 430px) {
+  .content .projects .project {
+    width: 120px;
+
+    .description {
+      font-size: 0.78rem;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .content .projects .project {
+    width: 180px;
+
+    .description {
+      font-size: 1rem;
+    }
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}

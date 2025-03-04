@@ -31,6 +31,11 @@ body {
       font-weight: bold;
     }
 
+    .nav {
+      padding-left: 0;
+      padding-right: 5px;
+    }
+
     .home, .nav {
       display: flex;
       flex-direction: row;
@@ -44,7 +49,6 @@ body {
         text-decoration: none;
 
         font-family: "Space Mono", sans-serif;
-        font-size: 20px;
         color: $text;
 
         img {
@@ -59,7 +63,7 @@ body {
   .content {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    // width: 50%;
     margin: 16px auto;
 
     .back {
@@ -79,5 +83,47 @@ body {
         margin-right: 10px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .header {
+    .nav {
+      .item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  .header {
+    .nav {
+      .item {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .content {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 988px) {
+  .header {
+    .nav {
+      .item {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .content {
+    width: 50%;
   }
 }

@@ -49,3 +49,10 @@ $light_blue: #81b4c5;
     color: $light_blue;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .content p img {
+    width: 90%;
+    height: auto;
+  }
+}
