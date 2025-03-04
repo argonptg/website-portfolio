@@ -1,0 +1,47 @@
+$dark_black: #13161B;
+$light_black: #222730;
+$text: #D8E2E9;
+$blue: #40798c;
+$light_blue: #81b4c5;
+
+.content {
+  h1 {
+    color: $light_blue;
+    font-family: "Space Mono", monospace;
+  }
+
+  .container {
+    display: flow-root;
+
+    .floated {
+      float: right;
+    }
+
+    p {
+      color: $text;
+      text-align: justify;
+      font-family: "Funnel Sans", sans-serif;
+      font-size: 1.05rem;
+    }
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+
+    .socials {
+      padding: 0;
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: space-around;
+
+      li > a > img {
+        width: 32px;
+
+        filter: invert(97%) sepia(2%) saturate(2244%) hue-rotate(175deg) brightness(96%) contrast(90%);
+      }
+    }
+  }
+}

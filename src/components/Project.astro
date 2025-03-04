@@ -1,0 +1,10 @@
+---
+const { img, name, description, url } = Astro.props
+import "../styles/projects.scss"
+---
+
+<a href={url} class="project" target="_blank">
+    <img src={img} alt="Logo" />
+    <span class="title">{name}</span>
+    <span class="description">{description}</span>
+</a>

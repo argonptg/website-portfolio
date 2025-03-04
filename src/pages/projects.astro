@@ -1,0 +1,25 @@
+---
+import Base from "../layouts/Base.astro"
+import "../styles/projects.scss"
+import Project from "../components/Project.astro";
+---
+
+<Base>
+    <h1>Projects</h1>
+
+    <div class="projects">
+        <Project
+                img="/logos/emerald.webp"
+                name="Emerald"
+                description="Um bot de uso geral para o Discord"
+                url="https://github.com/argonptg/emerald"
+        />
+
+        <Project
+                img="/logos/bpo.png"
+                name="BPO"
+                description="Um app para gerenciar sua biblioteca de jogos"
+                url="https://github.com/blackpearlorigin/blackpearlorigin"
+        />
+    </div>
+</Base>

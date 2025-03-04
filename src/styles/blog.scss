@@ -1,0 +1,52 @@
+$dark_black: #13161B;
+$light_black: #222730;
+$text: #D8E2E9;
+$blue: #40798c;
+$light_blue: #81b4c5;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.content {
+  .intro {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-family: 'Space Mono', monospace;
+      font-weight: bolder;
+      font-size: 2.5rem;
+      color: $light_blue;
+    }
+  }
+}
+
+.post {
+  display: block;
+  background-color: $light_black;
+  border: 2px solid $light_blue;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+
+  margin-bottom: 1rem;
+
+  text-decoration: none;
+
+  .post_title {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 1.5rem;
+      color: $light_blue;
+      margin-bottom: 0;
+      text-decoration: underline;
+    }
+
+    span {
+      color: $blue;
+      font-family: 'Space Mono', monospace;
+
+      margin-bottom: 0.5rem;
+    }
+  }
+}
