@@ -1,8 +1,8 @@
 ---
 import { late } from "astro/zod";
-import Base from "../layouts/Base.astro";
-import Post from "../components/Post.astro";
-import "../styles/index.scss";
+import Base from "../../layouts/Base.astro";
+import Post from "../../components/Post.astro";
+import "../../styles/index.scss";
 
 const welcomeMessages = [
     "Welcome!",
@@ -29,14 +29,13 @@ const latestPost: any = allPosts[0];
         </span>
 
         <span class="introduction">
-            Me chamo Davi, sou um dev frontend e estou aprendendo <b>C#</b>,
-            <b>Javascript / Typescript</b> e <b>Svelte</b>
+            My name is Davi, I'm a frontend dev and I'm learning <b>C#</b>,
+            <b>Javascript / Typescript</b> and <b>Svelte</b>
         </span>
-
     </div>
 
     <div class="recent">
-        <h2 id="recent">Post mais recente: </h2>
+        <h2 id="recent">Most recent post: </h2>
         <Post
                 title={latestPost.frontmatter.title}
                 date={latestPost.frontmatter.pubDate}
@@ -45,7 +44,7 @@ const latestPost: any = allPosts[0];
         />
     </div>
 
-    <a href="/en" class="language">
-        🇬🇧 English speaker? Swap to english here!
+    <a href="/" class="language">
+        🇧🇷 Falante de Português? Mude para o Português aqui!
     </a>
 </Base>

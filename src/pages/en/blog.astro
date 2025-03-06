@@ -1,7 +1,7 @@
 ---
-import Base from "../layouts/Base.astro";
-import Post from "../components/Post.astro";
-import "../styles/blog.scss";
+import Base from "../../layouts/Base.astro";
+import Post from "../../components/Post.astro";
+import "../../styles/blog.scss";
 
 const allPosts: IPost[] = Object.values(import.meta.glob("./blog/*.md", { eager: true }));
 allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());

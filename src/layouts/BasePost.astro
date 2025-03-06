@@ -1,6 +1,18 @@
 ---
 import '../styles/post.scss'
 import '../styles/layout.scss'
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+let urlUpdate: string;
+
+if (lang === "en")
+	urlUpdate = "/en";
+else
+	urlUpdate = "";
 ---
 
 <!doctype html>
@@ -18,33 +30,33 @@ import '../styles/layout.scss'
 	<body>
 		<div class="header">
 			<div class="home">
-				<a href="/" class="item" id="home">
+				<a href={`${urlUpdate}/`} class="item" id="home">
 					<img src="/porto.gif" alt="portgfmo">
 					argonptg
 				</a>
 			</div>
 			<ul class="nav">
 				<li class="item">
-					<a href="/about" class="item">
-						sobre
+					<a href={`${urlUpdate}/about`} class="item">
+						{t('nav.about')}
 					</a>
 				</li>
 				<li class="item">
-					<a href="/projects" class="item">
-						projetos
+					<a href={`${urlUpdate}/projects`} class="item">
+						{t('nav.projects')}
 					</a>
 				</li>
 				<li class="item">
-					<a href="/blog" class="item">
-						blog
+					<a href={`${urlUpdate}/blog`} class="item">
+						{t('nav.blog')}
 					</a>
 				</li>
 			</ul>
 		</div>
 		<div class="content">
-			<a href="/blog" class="back">
+			<a href={`${urlUpdate}/blog`} class="back">
 				<img src="/back.svg" alt="back">
-				<span>Voltar</span>
+				<span>{t('content.back')}</span>
 			</a>
 			<slot/>
 
